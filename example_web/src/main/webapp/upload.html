@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+  <title>second 首页</title>
+</head>
+<body>
+<!-- enctype的值很重要,upload.jsp为处理上传的jsp-->
+<form name="form1"  method="post" enctype="multipart/form-data" action="upload.do?abc=123">
+<p>
+<INPUT type="text" name="firstname"> text<BR>
+</p>
+<p>
+  <input name="file1" type="file">
+</p>
+<p>
+<INPUT type="text" name="secondname"> text<BR>
+</p>
+<p>
+  <input name="file2" type="file">
+</p>
+<p>
+  <input type="submit" name="Submit" value="上传">
+</p>
+</form >
+</body>
+</html>

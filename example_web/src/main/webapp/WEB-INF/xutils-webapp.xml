@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xxiaozaichu/maven-repo/master/xutils-config.xsd">
+	<import name="x_welcome_page">/index.btl.html</import>
+	<import name="password.admin">123456,role1</import>
+	<bean id="/doreg.b.html" class="zcu.xutil.web.TestAction">
+		<set name="JavaPojo">user:first.User</set>
+	</bean>
+	<bean id=".b.html" class="zcu.xutil.misc.BeeTemplate">
+		<set name="statementStart">&lt;!--:</set>
+		<set name="statementEnd">--&gt;</set>		
+	</bean>
+</beans>

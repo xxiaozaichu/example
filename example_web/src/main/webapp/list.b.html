@@ -1,0 +1,23 @@
+<html>
+  <head>
+  <title>reg success</title>
+</head>
+<body>
+<p>
+用户名：  ${user.username!} <br/>
+
+</p>
+密码：  ${user.password!}
+<p>
+
+orders:<br/>
+	<table>
+	<!--: for(order in list) {-->
+	<tr>
+			<th align="right">${order.orderid}</th>
+			<td align="left">${order.amt}</td>
+	</tr>
+	<!--: } -->
+	</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<head>
+<title>Login for Examples</title>
+<body bgcolor="white">
+<br/>
+你好: ${request.remoteUser!"游客"}
+你好: ${session['savedurl']!'notfoundsr'}
+<br/>
+<br/>
+	<form method="POST" action='login.b.html'>
+		<table>
+			<tr>
+				<th align="right">username:</th>
+				<td align="left"><input type="text" name="j_username" value="${parameter.j_username}"></td>
+			</tr>
+			<tr>
+				<th align="right">password:</th>
+				<td align="left"><input type="password" name="j_password"></td>
+			</tr>
+	<!--:if(xweb_captcha_required!false){-->			
+			<tr>
+				<th align="right">Captcha</th>
+				<td align="left"><input type="text" name="j_captcha"></td>
+				<td align="right">	
+					<img src="captcha.gif" style="vertical-align: middle;"	onclick="this.src='captcha.gif?'+Math.random();" />
+				</td>
+			</tr>
+	<!--:} -->
+			<tr>
+				<td align="center">${xweb_errors!}</td>
+			</tr>
+			<tr>
+				<td align="right"><input type="submit" value="Log In"></td>
+				<td align="left"><input type="reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
