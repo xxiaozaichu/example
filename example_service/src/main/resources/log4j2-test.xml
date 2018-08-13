@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+  <Appenders>
+
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+     <File name="File" fileName="logs/mylog.log">
+      <PatternLayout>
+        <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+  <Loggers>  
+  <Root level="info">
+    
+    <Appender-ref ref="Console"/>
+  </Root>
+  <Logger name="org.jgroups" level="info">
+    
+  </Logger>
+  <Logger name="zcu.xutil" level="debug">
+    
+     <Appender-ref ref="File"/>
+  </Logger>
+  <Logger name="remote" level="debug" additivity="false">
+     
+     <Appender-ref ref="Console"/>
+  </Logger>
+  </Loggers> 
+</Configuration>

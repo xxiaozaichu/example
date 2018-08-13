@@ -11,6 +11,13 @@
     <groupId>zcu.xutil</groupId>
     <artifactId>example_service</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>zcu.xutil</groupId>
+            <artifactId>example_api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     
 </project>

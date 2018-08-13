@@ -66,5 +66,39 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>none</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includeScope>runtime</includeScope>
+                    <!-- ${project.build.directory}为Maven内置变量，缺省为target -->
+                    <outputDirectory>${user.home}/apache-tomcat-8.5.32/commonlib</outputDirectory>
+                    <!-- 表示是否不包含间接依赖的包
+                    <excludeTransitive>true</excludeTransitive>
+                    -->
+                    <!-- 表示复制的jar文件去掉版本信息 -->
+                    <stripVersion>false</stripVersion>
+                    <excludeArtifactIds>
+
+                    </excludeArtifactIds>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+                </configuration>
+            </plugin>
+
+        </plugins>
     </build>
 </project>
